@@ -30,8 +30,8 @@ export const techStack: TechSkill[] = [
 
   // Frontend
   { name: "React", category: "Frontend", level: "Advanced", years: 2, color: "#3178C6" },
-  { name: "Zafire", category: "Frontend", level: "Advanced", years: 2, color: "#3178C6" },
-  { name: "Material UI", category: "Frontend", level: "Advanced", years: 2, color: "#3178C6" },
+  { name: "Material UI", category: "Frontend", level: "Intermediate", years: 2, color: "#3178C6" },
+  { name: "Vite", category: "Frontend", level: "Intermediate", years: 1, color: "#3178C6" },
 
   // Cloud
   { name: "AWS", category: "Cloud", level: "Intermediate", years: 1, color: "#ff8000" },

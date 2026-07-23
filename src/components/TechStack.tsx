@@ -165,7 +165,6 @@ function FloatingView({
               title={
                 <>
                   <Typography variant="subtitle2">{skill.name}</Typography>
-                  <Typography variant="body2">{skill.category}</Typography>
                   <Typography variant="body2">{skill.level}</Typography>
                   <Typography variant="body2">{skill.years} years</Typography>
                 </>

@@ -122,15 +122,6 @@ export default function Header() {
             Resume
           </Button>
           <Button
-            component="a"
-            sx={buttonStyle}
-            href="https://yewmeng28.github.io/theory-quest/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Theory Quest
-          </Button>
-          <Button
             sx={buttonStyle}
             component={Link}
             to="/contact"
@@ -184,14 +175,6 @@ export default function Header() {
                 onClick={() => setOpen(false)}
               >
                 <ListItemText primary="Resume" />
-              </ListItemButton>
-
-              <ListItemButton
-                component="a"
-                href="https://yewmeng28.github.io/theory-quest/"
-                target="_blank"
-              >
-                <ListItemText primary="Theory Quest" />
               </ListItemButton>
 
               <ListItemButton

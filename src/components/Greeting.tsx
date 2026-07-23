@@ -4,16 +4,21 @@ import FadingText from "./FadingText.tsx";
 export default function Greeting() {
 
   const hellos = [
-    "Welcome",
+    "Hello",
     "こんにちは",
     "你好",
+    "नमस्ते",
     "Χαίρετε",
-    "Hej",
+    "Olá",
     "مرحبًا",
     "안녕하세요",
+    "ഹലോ",
     "Привет",
+    "سلام",
     "Ciao",
-    "Olá",
+    "העלא",
+    "Hej",
+    "هيلو",
     "Guten Tag",
   ];
 
@@ -30,8 +35,8 @@ export default function Greeting() {
     >
       <FadingText
         texts={hellos}
-        interval={2500}
-        fadeDuration={1000}
+        interval={1500}
+        fadeDuration={700}
         variant="h3"
       />
     </Box>
