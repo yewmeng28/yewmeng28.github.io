@@ -1,14 +1,16 @@
 import { lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "./components/Layout.tsx";
 import Home from "./pages/Home.tsx";
 import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/Contact.tsx";
+import Tools from "./pages/Tools.tsx";
 
 // Heavy PDF libraries are only loaded when these pages are visited.
 const Resume = lazy(() => import("./pages/Resume.tsx"));
-const PdfCompressor = lazy(() => import("./pages/PdfCompressor.tsx"));
+const PdfCompressor = lazy(() => import("./components/tools/PdfCompressor.tsx"));
+const ImageCompressor = lazy(() => import("./components/tools/ImageCompressor.tsx"));
 
 export default function App() {
   return (
@@ -18,7 +20,11 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/pdf-compressor" element={<PdfCompressor />} />
+          <Route path="/tools" element={<Tools />}>
+            <Route index element={<Navigate to="pdf" replace />} />
+            <Route path="pdf" element={<PdfCompressor />} />
+            <Route path="image" element={<ImageCompressor />} />
+          </Route>
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>

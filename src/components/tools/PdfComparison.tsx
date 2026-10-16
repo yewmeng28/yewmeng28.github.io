@@ -4,8 +4,8 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { Document, Page } from "react-pdf";
 
-import "../lib/pdfjs.ts";
-import { formatBytes } from "../utils/compressPdf.ts";
+import "../../lib/pdfjs.ts";
+import { formatBytes } from "../../utils/formatBytes.ts";
 
 interface PdfComparisonProps {
   original: File;
