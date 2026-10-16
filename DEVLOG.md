@@ -31,7 +31,10 @@
 - Replaced three duplicated project flip cards with data-driven `ProjectFlipCard` (`src/data/projects.ts`)
 - Shared `Layout` (header + background) and nav config (`src/config/navigation.ts`)
 - Removed unused assets and `BackendFlipCard`; untracked `.idea` and `.vite`
-- Lazy-loaded Resume page to shrink the main bundle
+- Lazy-loaded Resume and PDF pages (main bundle 1.5 MB -> 450 KB)
+
+### PDF Compressor
+- New `/pdf-compressor` tab, runs fully in the browser (pdf.js + pdf-lib)
 
 ---
 
