@@ -20,6 +20,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
 import { useThemeContext } from "../context/ThemeContext";
+import { navItems } from "../config/navigation";
 
 export default function Header() {
 
@@ -100,34 +101,16 @@ export default function Header() {
             alignItems: "center",
           }}
         >
-          <Button
-            sx={buttonStyle}
-            component={Link}
-            to="/"
-          >
-            Home
-          </Button>
-          <Button
-            sx={buttonStyle}
-            component={Link}
-            to="/projects"
-          >
-            Projects
-          </Button>
-          <Button
-            sx={buttonStyle}
-            component={Link}
-            to="/resume"
-          >
-            Resume
-          </Button>
-          <Button
-            sx={buttonStyle}
-            component={Link}
-            to="/contact"
-          >
-            Contact
-          </Button>
+          {navItems.map(({ label, path }) => (
+            <Button
+              key={path}
+              sx={buttonStyle}
+              component={Link}
+              to={path}
+            >
+              {label}
+            </Button>
+          ))}
           <Tooltip
             title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
@@ -153,37 +136,16 @@ export default function Header() {
           <Box sx={{ width: 250 }}>
             <List>
 
-              <ListItemButton
-                component={Link}
-                to="/"
-                onClick={() => setOpen(false)}
-              >
-                <ListItemText primary="Home" />
-              </ListItemButton>
-
-              <ListItemButton
-                component={Link}
-                to="/projects"
-                onClick={() => setOpen(false)}
-              >
-                <ListItemText primary="Projects" />
-              </ListItemButton>
-
-              <ListItemButton
-                component={Link}
-                to="/resume"
-                onClick={() => setOpen(false)}
-              >
-                <ListItemText primary="Resume" />
-              </ListItemButton>
-
-              <ListItemButton
-                component={Link}
-                to="/contact"
-                onClick={() => setOpen(false)}
-              >
-                <ListItemText primary="Contact" />
-              </ListItemButton>
+              {navItems.map(({ label, path }) => (
+                <ListItemButton
+                  key={path}
+                  component={Link}
+                  to={path}
+                  onClick={() => setOpen(false)}
+                >
+                  <ListItemText primary={label} />
+                </ListItemButton>
+              ))}
 
             </List>
           </Box>

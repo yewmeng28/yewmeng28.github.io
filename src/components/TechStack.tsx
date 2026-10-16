@@ -245,9 +245,7 @@ function CategoryView({
   );
 }
 
-function TimelineView({
-}: {
-}) {
+function TimelineView() {
   return (
     <Box
       sx={{

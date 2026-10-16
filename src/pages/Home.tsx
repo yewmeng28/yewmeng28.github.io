@@ -1,5 +1,4 @@
 import { Box, Card, CardContent } from "@mui/material";
-import Header from "../components/Header.tsx";
 import Introduction from "../components/Introduction.tsx";
 import Greeting from "../components/Greeting.tsx";
 import TechStack from "../components/TechStack.tsx";
@@ -8,7 +7,6 @@ export default function Home() {
 
   return (
     <>
-      <Header/>
       {/*TODO: refactor the components, keep Home simple.*/}
       <Box
         sx={{

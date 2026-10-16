@@ -1,14 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import {Box, Button, Card, CardContent} from "@mui/material";
-import { Document, Page, pdfjs } from "react-pdf";
+import { Document, Page } from "react-pdf";
+import "../lib/pdfjs.ts";
 
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
 
 export default function ResumeViewer() {
   const [numPages, setNumPages] = useState(0);

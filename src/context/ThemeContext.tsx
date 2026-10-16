@@ -3,7 +3,6 @@ import {
   useContext,
   useMemo,
   useState,
-  useEffect,
 } from "react";
 
 import { ThemeProvider, CssBaseline } from "@mui/material";
@@ -22,15 +21,13 @@ export function ThemeContextProvider({
                                      }: {
   children: React.ReactNode;
 }) {
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-
-    if (saved) {
-      setDarkMode(saved === "dark");
+  const [darkMode, setDarkMode] = useState(() => {
+    try {
+      return localStorage.getItem("theme") !== "light";
+    } catch {
+      return true;
     }
-  }, []);
+  });
 
   const toggleTheme = () => {
     const newValue = !darkMode;

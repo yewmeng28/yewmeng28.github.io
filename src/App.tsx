@@ -1,36 +1,24 @@
+import { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Resume from "./pages/Resume";
-import Projects from "./pages/Projects";
+import Layout from "./components/Layout.tsx";
+import Home from "./pages/Home.tsx";
+import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/Contact.tsx";
-import HexBackground from "./components/HexBackground.tsx";
+
+// The PDF viewer is only loaded when this page is visited.
+const Resume = lazy(() => import("./pages/Resume.tsx"));
 
 export default function App() {
   return (
     <BrowserRouter>
-      <HexBackground/>
-
       <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-
-        <Route
-          path="/resume"
-          element={<Resume />}
-        />
-
-        <Route
-          path="/projects"
-          element={<Projects />}
-        />
-
-        <Route
-          path="/contact"
-          element={<Contact />}
-        />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

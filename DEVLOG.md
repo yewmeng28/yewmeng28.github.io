@@ -25,6 +25,14 @@
 - Added validation
 - Added loading and success states
 
+## 2026-10-16
+
+### Cleanup
+- Replaced three duplicated project flip cards with data-driven `ProjectFlipCard` (`src/data/projects.ts`)
+- Shared `Layout` (header + background) and nav config (`src/config/navigation.ts`)
+- Removed unused assets and `BackendFlipCard`; untracked `.idea` and `.vite`
+- Lazy-loaded Resume page to shrink the main bundle
+
 ---
 
 ## Next
