@@ -37,8 +37,9 @@
 - New `/pdf-compressor` tab, runs fully in the browser (pdf.js + pdf-lib)
 
 ### Tools
-- Grouped tools under `/tools` with a tab per tool (PDF, Image)
+- Grouped tools under `/tools` with a tab per tool (PDF, Image, Video)
 - Added image compressor (JPEG/WebP/PNG, quality, max size, before/after)
+- Added video compressor (WebCodecs via mediabunny, MP4 output, progress and cancel)
 
 ---
 

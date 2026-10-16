@@ -14,4 +14,5 @@ export const navItems: NavItem[] = [
 export const toolTabs: NavItem[] = [
   { label: "PDF", path: "/tools/pdf" },
   { label: "Image", path: "/tools/image" },
+  { label: "Video", path: "/tools/video" },
 ];

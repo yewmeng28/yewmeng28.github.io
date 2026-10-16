@@ -11,6 +11,7 @@ import Tools from "./pages/Tools.tsx";
 const Resume = lazy(() => import("./pages/Resume.tsx"));
 const PdfCompressor = lazy(() => import("./components/tools/PdfCompressor.tsx"));
 const ImageCompressor = lazy(() => import("./components/tools/ImageCompressor.tsx"));
+const VideoCompressor = lazy(() => import("./components/tools/VideoCompressor.tsx"));
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route index element={<Navigate to="pdf" replace />} />
             <Route path="pdf" element={<PdfCompressor />} />
             <Route path="image" element={<ImageCompressor />} />
+            <Route path="video" element={<VideoCompressor />} />
           </Route>
           <Route path="/contact" element={<Contact />} />
         </Route>
