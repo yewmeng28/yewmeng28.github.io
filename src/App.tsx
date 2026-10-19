@@ -10,6 +10,7 @@ import Tools from "./pages/Tools.tsx";
 // Heavy PDF libraries are only loaded when these pages are visited.
 const Resume = lazy(() => import("./pages/Resume.tsx"));
 const PdfCompressor = lazy(() => import("./components/tools/PdfCompressor.tsx"));
+const PdfMergeSplit = lazy(() => import("./components/tools/PdfMergeSplit.tsx"));
 const ImageCompressor = lazy(() => import("./components/tools/ImageCompressor.tsx"));
 const VideoCompressor = lazy(() => import("./components/tools/VideoCompressor.tsx"));
 
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/tools" element={<Tools />}>
             <Route index element={<Navigate to="pdf" replace />} />
             <Route path="pdf" element={<PdfCompressor />} />
+            <Route path="pdf-merge-split" element={<PdfMergeSplit />} />
             <Route path="image" element={<ImageCompressor />} />
             <Route path="video" element={<VideoCompressor />} />
           </Route>

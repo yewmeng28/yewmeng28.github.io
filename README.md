@@ -8,6 +8,7 @@ Portfolio website and home to personal projects!
 - **Resume** – view and download my resume
 - **Tools** – free utilities that run entirely in your browser (files are never uploaded):
   - **PDF compressor** – pages are rasterised to JPEG and the PDF is rebuilt (`pdf.js` + `pdf-lib`). Text in the output is not selectable.
+  - **PDF merge/split** – combine PDFs in a chosen order, or extract pages and ranges (`pdf-lib`). Page content stays as-is, so text remains selectable.
   - **Image compressor** – re-encode JPEG, PNG or WebP with adjustable quality and max size, with a before/after preview.
   - **Video compressor** – re-encode to MP4 using the browser's WebCodecs encoder (`mediabunny`), with resolution and quality options. Needs a recent Chrome, Edge or Safari.
 - **Contact** – contact form sent via EmailJS

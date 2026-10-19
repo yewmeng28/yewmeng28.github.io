@@ -13,6 +13,7 @@ export const navItems: NavItem[] = [
 
 export const toolTabs: NavItem[] = [
   { label: "PDF", path: "/tools/pdf" },
+  { label: "PDF Merge/Split", path: "/tools/pdf-merge-split" },
   { label: "Image", path: "/tools/image" },
   { label: "Video", path: "/tools/video" },
 ];
