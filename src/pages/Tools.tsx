@@ -6,7 +6,10 @@ import { toolTabs } from "../config/navigation.ts";
 
 export default function Tools() {
   const { pathname } = useLocation();
-  const current = toolTabs.find((tab) => pathname.startsWith(tab.path));
+  // Match whole path segments so "/tools/pdf" doesn't claim "/tools/pdf-merge-split".
+  const current = toolTabs.find(
+    ({ path }) => pathname === path || pathname.startsWith(`${path}/`)
+  );
 
   return (
     <Box
